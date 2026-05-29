@@ -1,22 +1,23 @@
 import Login from "@/hooks/Login-Hooks";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import ButtonCustom from "../components/LoginComponents/ButtonCustom";
-import InputCustom  from "../components/LoginComponents/InputCustom";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import ButtonCustom from "../components/ButtonCustom";
+import InputCustom from "../components/InputCustom";
 import useLogin from "@/hooks/Login-Hooks";
 export default function LoginScreen() {
 
     return (
         <View style={styles.container}>
-        
-            <Text style={styles.title}>Login</Text> 
-           <InputCustom placeholder = "Username"/>
-           <InputCustom placeholder = "Password" secureTextEntry={true}/>
+            <Text style={styles.title}>Login</Text>
+            <InputCustom placeholder="Username" />
+            <InputCustom placeholder="Password" secureTextEntry={true} />
+            <TouchableOpacity onPress={()=> navigation.navigate("Register")}>
+                <Text> Register?</Text>
+            </TouchableOpacity>
             <ButtonCustom onPress={useLogin} />
         </View>
     )
 }
-
 const styles = StyleSheet.create({
     container: {
         alignContent: 'center',

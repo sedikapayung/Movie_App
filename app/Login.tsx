@@ -1,5 +1,5 @@
-import LoginScreen from "@/screens/LoginScreen";
+import Regsterscreen  from "@/screens/RegisterScreen";
 
 export default function PageLogin() {
-    return <LoginScreen />
+    return <Regsterscreen/>
 }
