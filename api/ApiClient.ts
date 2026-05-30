@@ -1,5 +1,6 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = 'c440aa1fd55e2513055a1a147bc87072';
+const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
+
 
 export const apiClient = {
   get: async <T>(endpoint: string): Promise<T> => {
